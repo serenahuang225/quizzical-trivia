@@ -1,13 +1,175 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #F5F7FB;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Whole quiz styling */
+h2 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 1rem;
+  text-align: center;
+  color: #293264;
+}
+
+.quiz {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url("./images/blue-blob.png"), url("./images/yellow-blob.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 60% 35%, 60% 35%;
+  background-position: -60% 130%, 150% -20%;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  max-width: 25rem;
+  justify-content: center;
+  align-items: center;
+}
+
+form > div {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+button {
+  background: #4D5B9E;
+  border-radius: 10px;
+  padding: 0.5rem 1.3125rem;
+  border: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 0.9rem;
+  color: #F5F7FB;
+  cursor: pointer;
+}
+
+/* Single quiz question styling */
+fieldset {
+  display: flex;
+  border: 0.75px solid #DBDEF0;
+  border-style: none none groove none;
+  padding: 0 0 1rem 0;
+  margin-bottom: 1rem;
+}
+
+legend {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #293264;
+  margin: 0 0 0.5rem 0;
+  text-align: left;
+  margin: 0;
+}
+
+input {
+  display: none;
+}
+
+label {
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 2rem;
+  color: #293264;
+  border: 0.0625rem solid #4D5B9E;
+  border-radius: 0.5rem;
+  align-items: center;
+  padding: 0.1875rem 0.5rem;
+  margin-right: 0.8125rem;
+  cursor: pointer;
+  flex: 1 0 auto;
+}
+
+input:checked + label {
+  background: #D6DBF5;
+  border: 0.0625rem solid #D6DBF5;
+}
+
+label.correct-submited, input:checked + label.correct-submited {
+  background: #94D7A2;
+  border: 0.0625rem solid #94D7A2;
+}
+
+input:disabled + label.wrong-submited {
+  border: 0.0625rem solid #a1a1a1;
+  color: #a1a1a1;
+  cursor: auto;
+}
+
+input:checked + label.wrong-submited {
+  background: #F8BCBC;
+  border: 0.0625rem solid #F8BCBC;
+}
+
+fieldset > div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 25rem;
+}
+
+/* Welcome screen styling */
+.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("./images/blue-blob.png"), url("./images/yellow-blob.png");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 60% 35%, 60% 35%;
+  background-position: -60% 130%, 150% -20%;
+}
+
+.welcome > h1 {
+  font-family: 'Karla';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2.1rem;
+  color: #293264;
+  margin: 0 0 0.5rem 0;
+}
+
+.welcome > h4 {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #293264;
+  margin: 0 0 2rem 0;
+}
+
+.welcome > button {
+  width: 12rem;
+  height: 3rem;
+  background: #4D5B9E;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: #F5F7FB;
 }
